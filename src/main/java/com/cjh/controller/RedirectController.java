@@ -30,7 +30,7 @@ public class RedirectController {
     @RequestMapping("/{link}")
     public void alipayforward(HttpServletRequest request, HttpServletResponse response, @PathVariable("link")String link) throws Exception {
         String longUrl = "";
-        String redisKey = "shorturl:msginfo:"+link;
+        String redisKey = "shorturl:info:"+link;
         boolean exist = redisUtils.hasKey(redisKey);
         if(exist){
             longUrl = redisUtils.get(redisKey);
