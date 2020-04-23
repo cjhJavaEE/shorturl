@@ -1,0 +1,24 @@
+# Tomcat
+server:
+  name: shorturl
+  port: 7788
+  tomcat:
+    max-threads: 1000
+    min-spare-threads: 30
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 2
+    password:
+    timeout: 1000
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+
+#这个要改成域名
+dwz:
+  link: http://***.*** #你的域名
